@@ -1,0 +1,6 @@
+output/
+tmp/
+*.log
+export-pdfs.mjs
+process-map.py
+preview-server.js
