@@ -655,7 +655,24 @@ h2 {
   margin-top: 8px;
 }
 
-.site-footer a {
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.site-footer .back-top {
   display: grid;
   place-items: center;
   width: 46px;
@@ -663,6 +680,89 @@ h2 {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 50%;
+}
+
+.content-hero {
+  padding: 92px;
+  color: #fff;
+  background-image:
+    linear-gradient(90deg, rgba(7, 24, 39, 0.88), rgba(7, 24, 39, 0.52)),
+    url("assets/hero-auto-recycling.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.content-hero h1 {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.16;
+}
+
+.content-hero p {
+  max-width: 700px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 19px;
+}
+
+.content-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 64px;
+  padding: 86px 92px;
+  background: #fff;
+}
+
+.content-main {
+  display: grid;
+  gap: 34px;
+}
+
+.content-main section {
+  display: grid;
+  gap: 14px;
+}
+
+.content-main h2 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.content-main h3,
+.contact-panel h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.content-main p,
+.content-main li,
+.contact-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.content-main ul,
+.content-main ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.contact-panel {
+  align-self: start;
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+  background: var(--wash);
+  box-shadow: 0 18px 48px rgba(7, 24, 39, 0.08);
+}
+
+.contact-panel a {
+  color: var(--deep);
+  font-weight: 900;
 }
 
 .mobile-contact {
@@ -692,6 +792,8 @@ h2 {
 
   .hero,
   .section,
+  .content-hero,
+  .content-body,
   .values-inner,
   .contact-section,
   .site-footer {
@@ -705,6 +807,7 @@ h2 {
 
   .intro-grid,
   .services,
+  .content-body,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -752,6 +855,8 @@ h2 {
   }
 
   .section,
+  .content-hero,
+  .content-body,
   .values-inner,
   .contact-section {
     padding-top: 64px;
@@ -796,6 +901,11 @@ h2 {
 
   .site-footer {
     flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .mobile-contact {
