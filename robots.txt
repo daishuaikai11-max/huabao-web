@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daishuaikai11-max.github.io/huabao-web/sitemap.xml
+Sitemap: https://huabaohuishou.com/sitemap.xml
