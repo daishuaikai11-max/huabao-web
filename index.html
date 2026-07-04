@@ -242,5 +242,18 @@
       <a href="#phone-consult">电话咨询</a>
       <a href="#contact-info">联系方式</a>
     </div>
+    <script>
+      (() => {
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+
+        window.addEventListener("pageshow", () => {
+          if (!window.location.hash) {
+            requestAnimationFrame(() => window.scrollTo(0, 0));
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
